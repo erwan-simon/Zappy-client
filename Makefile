@@ -1,4 +1,4 @@
-NAME	= a.out
+NAME	= client
 
 CC	= g++
 
@@ -9,13 +9,12 @@ SRCS	= ./source/main.cpp	\
 
 OBJS	= $(SRCS:.cpp=.o)
 
-CPPFLAGS = -I game/ -I graphic/ -I character/ -I character/ai_tools/
 CPPFLAGS += -W -Wall -Wextra -g3 -std=c++11
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	 $(CC) $(OBJS) -o $(NAME) -lncurses -lpthread
+	 $(CC) $(OBJS) -o $(NAME)
 
 clean:
 	$(RM) $(OBJS)
