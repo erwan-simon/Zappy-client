@@ -4,12 +4,13 @@ CC	= g++
 
 RM	= rm -f
 
-SRCS	= ./source/main.cpp
+SRCS	= ./source/main.cpp	\
+		  ./source/Network.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 
 CPPFLAGS = -I game/ -I graphic/ -I character/ -I character/ai_tools/
-CPPFLAGS += -W -Wall -Wextra -g3
+CPPFLAGS += -W -Wall -Wextra -g3 -std=c++11
 
 all: $(NAME)
 
