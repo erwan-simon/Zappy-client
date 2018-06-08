@@ -94,7 +94,7 @@ bool 								Network::ReadFromServer()
 	std::unique_ptr<std::string> 	message(new std::string);
 	fd_set 							read_fd_set;
 	int 							i;
-	struct timeval					tv = {0, 50};
+	struct timeval					tv = {0, 0};
 
 	/* Block until input arrives on one or more active sockets. */
 	read_fd_set = _active_fd_set;
